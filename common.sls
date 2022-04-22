@@ -7,3 +7,7 @@
   file.directory:
     - user: ubuntu
     - group: ubuntu
+
+nfs-kernel-server:
+  pkg:	
+    - installed
