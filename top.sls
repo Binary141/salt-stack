@@ -1,4 +1,0 @@
-#top.sls
-base:
-  '*':
-    - common
