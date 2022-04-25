@@ -12,7 +12,7 @@ download-extract-pokemon-image:
 # Configure /var/www/html/water/config.php
 config-php:
   cmd.run:
-    - name: echo "<?php /************************* * EDIT THESE LINES */$db_host = 'localhost';$db_user = 'foouser';$db_pass = 'foopassword';$db_name = 'pokemondb';/* * EDIT THESE LINES *************************/?>" > /var/www/html/water/config.php
+    - name: echo "<?php /************************* * EDIT THESE LINES */ \$db_host = 'localhost';\$db_user = 'foouser';\$db_pass = 'foopassword';\$db_name = 'pokemondb';/* * EDIT THESE LINES *************************/?>" > /var/www/html/water/config.php
 
 update-apt:
   cmd.run:
@@ -31,6 +31,11 @@ mysql-server-install:
 mysql-install:
   pkg:
     - name: php-mysql
+    - installed
+
+apache-php-install:
+  pkg:
+    - name: libapache2-mod-php
     - installed
 
 python-mysqldb-install:
