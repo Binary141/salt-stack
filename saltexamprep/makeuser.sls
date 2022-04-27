@@ -1,0 +1,2 @@
+{{ pillar['myuser'] }}:
+  user.present
